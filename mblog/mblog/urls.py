@@ -17,9 +17,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from mainsite.views import homepage
+from mainsite.views import homepage, showpost
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', homepage)
+    url(r'^$', homepage),
+    url(r'^post/(?P<slug>[\w-]+)', showpost)
 ]
