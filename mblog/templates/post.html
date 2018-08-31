@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <title>
-        Welcome to the Post
-    </title>
-</head>
-
-<body>
-    <h1>{{post.title}}</h1>
-    <hr>
+<!--post-->
+{% extends 'base.html' %}
+{% block title %} {{post.title}} - blogsss {% endblock %}
+{% block headmessage %}
+    <h3>{{post.title}}</h3>
+    <a href='/'>go to home page</a>
+{% endblock %}
+{% block content %}
     <p>
         {{post.body}}
     </p>
-    
-</body>
-
-</html>
+{% endblock %}
